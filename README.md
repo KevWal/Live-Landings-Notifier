@@ -1,5 +1,5 @@
 # Live-Landings-Notifier
-Notification of landing predictions within Xkm and X hours of a specified 'home' location.
+Notification of landing predictions within Xkm and X seconds of a specified 'home' location.
 
 Use https://pushover.net/ and https://github.com/dschep/ntfy to send notifications to android.
 
