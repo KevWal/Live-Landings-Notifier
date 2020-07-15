@@ -122,7 +122,7 @@ for vehicle in vehicles:
             confidence = vehicle['descending'] + vehicle['landed']
 
             # Build putput string
-            output += "Name: {}, Confidence {}, Distance {:2.0f}km, Land{}, http://sondehub.org/{} https://www.google.com/maps/dir/{:2.6f},{:2.6f}/{:2.6f},{:2.6f}\n\r".format(
+            output += "Name: {}, Confidence {}, Distance {:2.0f}km, Land{}, http://sondehub.org/{} https://www.google.com/maps/dir/{:2.6f}%2C{:2.6f}/{:2.6f}%2C{:2.6f}\n\r".format(
                        vehicle['vehicle'],
                        confidence,
                        landingDist,
