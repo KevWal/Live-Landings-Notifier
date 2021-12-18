@@ -68,7 +68,8 @@ argParser.add_argument('time',
 args = argParser.parse_args()
 
 # url for manifest containing landing predictions
-ManifestURL = 'https://legacy-snus.habhub.org/tracker/get_predictions.php'
+#ManifestURL = 'https://legacy-snus.habhub.org/tracker/get_predictions.php'
+ManifestURL = 'https://api.v2.sondehub.org/predictions?vehicles='
 
 # send GET request for JSON
 vehicles = requests.get(ManifestURL).json()
@@ -127,7 +128,7 @@ for vehicle in vehicles:
                        confidence,
                        landingDist,
                        landingTimeStr,
-                       vehicle['vehicle'][3:],
+                       vehicle['vehicle'], # [3:], Dont need this with new manifest URL
                        args.lat, args.long,
                        float(landing['lat']), float(landing['lon']))
 
